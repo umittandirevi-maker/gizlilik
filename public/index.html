@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - FocusAI</title>
+  <style>
+    :root {
+      --primary: #1A73E8;
+      --bg: #F8F9FA;
+      --card-bg: #FFFFFF;
+      --text: #202124;
+      --text-secondary: #5F6368;
+      --border: #DADCE0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #8AB4F8;
+        --bg: #121212;
+        --card-bg: #1E1E1E;
+        --text: #E8EAED;
+        --text-secondary: #9AA0A6;
+        --border: #3C4043;
+      }
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      margin: 0;
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    .metadata {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.05rem;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+    p, li {
+      font-size: 1rem;
+      color: var(--text);
+    }
+    ul {
+      padding-left: 24px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .highlight-box {
+      background: rgba(26, 115, 232, 0.08);
+      border-left: 4px solid var(--primary);
+      padding: 16px;
+      border-radius: 4px;
+      margin: 20px 0;
+    }
+    .contact-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 16px;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy for FocusAI</h1>
+    <div class="metadata">
+      <strong>Effective Date:</strong> October 24, 2026 &bull; 
+      <strong>Last Updated:</strong> October 24, 2026 &bull; 
+      <strong>Developer Contact:</strong> <a href="mailto:fixbangstudio@gmail.com">fixbangstudio@gmail.com</a>
+    </div>
+
+    <p>FocusAI ("we", "our", or "us") provides the <strong>FocusAI</strong> mobile application for Android devices. We place paramount importance on your privacy, digital well-being, and personal data sovereignty.</p>
+
+    <div class="highlight-box">
+      <strong>Key Privacy Guarantee:</strong> FocusAI operates on a 100% on-device architecture. Your notifications, messages, alerts, and contacts are analyzed locally in volatile memory and are <strong>never</strong> transmitted to external servers, cloud databases, or third parties.
+    </div>
+
+    <h2>1. Core Privacy Architecture: On-Device Processing</h2>
+    <ul>
+      <li><strong>No Cloud Uploads:</strong> FocusAI does not transmit any incoming notification text, titles, application origins, or user data over the internet.</li>
+      <li><strong>No External Logging:</strong> All filtering, keyword categorization, and prioritization logic are performed locally on your device.</li>
+      <li><strong>No Sale or Sharing of Data:</strong> We do not sell, rent, license, or disclose your notification contents or personal information to third-party ad networks, telemetry services, or data brokers.</li>
+    </ul>
+
+    <h2>2. Sensitive Android Permissions &amp; Usage</h2>
+    <p>To perform notification filtering and critical emergency alerting, FocusAI requires specific Android permissions. Each permission is restricted strictly to its stated function:</p>
+
+    <h3>A. Notification Listener Service (<code>BIND_NOTIFICATION_LISTENER_SERVICE</code>)</h3>
+    <p><strong>Why it is needed:</strong> Enables FocusAI to read incoming notifications in real-time.<br>
+    <strong>How it is used:</strong> Analyzes incoming alerts against your custom priority rules and selected emergency keywords to determine if an urgent alert should sound or if non-urgent notifications should be silenced.<br>
+    <strong>Data Retention:</strong> Processing occurs strictly in volatile device memory (RAM). Notification content is evaluated in milliseconds and immediately discarded; it is never stored persistently on disk or uploaded remotely.</p>
+
+    <h3>B. Post Notifications (<code>POST_NOTIFICATIONS</code>)</h3>
+    <p><strong>Why it is needed:</strong> Required on Android 13 (API 33) and newer to post alerts.<br>
+    <strong>How it is used:</strong> Delivers critical emergency notifications and alerts to you when prioritized events occur.</p>
+
+    <h3>C. Notification Policy Access (<code>ACCESS_NOTIFICATION_POLICY</code>) &amp; Vibration (<code>VIBRATE</code>)</h3>
+    <p><strong>Why it is needed:</strong> Permits FocusAI to interact with device alert channels.<br>
+    <strong>How it is used:</strong> Bypasses Do Not Disturb (DND) modes and triggers tactile vibrations exclusively for user-confirmed high-priority emergency conditions.</p>
+
+    <h3>D. Query All Packages (<code>QUERY_ALL_PACKAGES</code>)</h3>
+    <p><strong>Why it is needed:</strong> Allows FocusAI to display installed applications.<br>
+    <strong>How it is used:</strong> Used exclusively to populate your "Always Allow Apps" configuration screen with app names and icons so you can choose which apps bypass filtering. Package lists are never shared or transmitted.</p>
+
+    <h2>3. Information Storage &amp; Retention</h2>
+    <p>Your local configuration settings—such as chosen emergency keywords, volume preferences, and selected "Always Allow" apps—are saved exclusively in the private sandboxed storage of your device (<code>/data/data/com.aistudio.smartnotificationfilter.xrwv/</code>). You can erase all data at any time by uninstalling the application or clearing app data in your device's Application Settings.</p>
+
+    <h2>4. Third-Party Libraries &amp; Tracking</h2>
+    <p>FocusAI contains:</p>
+    <ul>
+      <li><strong>No Advertising SDKs:</strong> The application does not display advertisements.</li>
+      <li><strong>No Tracking / Analytics SDKs:</strong> We do not track user behavior or create user profiles.</li>
+      <li><strong>No Cloud Backend Dependencies:</strong> The core features run without requiring any remote server communication.</li>
+    </ul>
+
+    <h2>5. Controlling and Revoking Permissions</h2>
+    <p>You maintain full control over FocusAI permissions and can revoke them at any time:</p>
+    <ol>
+      <li>Open your device's <strong>Settings</strong>.</li>
+      <li>Go to <strong>Apps</strong> &rarr; <strong>Special App Access</strong> &rarr; <strong>Notification Access</strong>.</li>
+      <li>Find <strong>FocusAI</strong> and toggle permission access off.</li>
+    </ol>
+
+    <h2>6. Children's Privacy</h2>
+    <p>FocusAI does not target or knowingly collect information from children under the age of 13. The application operates solely as an on-device utility.</p>
+
+    <h2>7. Policy Changes</h2>
+    <p>Any revisions to this Privacy Policy will be published at this web address with an updated revision date.</p>
+
+    <h2>8. Developer Contact Information</h2>
+    <div class="contact-card">
+      <p>If you have any questions, inquiries, or privacy requests regarding FocusAI, please reach out to:</p>
+      <p><strong>Developer:</strong> FocusAI Studio<br>
+      <strong>Email:</strong> <a href="mailto:fixbangstudio@gmail.com">fixbangstudio@gmail.com</a></p>
+    </div>
+  </div>
+</body>
+</html>
