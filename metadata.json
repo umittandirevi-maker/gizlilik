@@ -1,0 +1,6 @@
+{
+  "name": "FocusAI",
+  "description": "On-device & Cloud AI notification filter intercepting incoming notifications and classifying priority with audio/vibration alerts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

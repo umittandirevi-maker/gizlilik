@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FocusAI</string>
+    <string name="notification_service_label">FocusAI Notification Service</string>
+    <string name="permission_status_title">Notification Access Permission</string>
+</resources>
